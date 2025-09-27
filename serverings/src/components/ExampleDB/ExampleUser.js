@@ -9,7 +9,7 @@ useEffect(() => {
     axios.get("http://localhost:8080/api/getUsers")
     .then((response) => {
       console.log(response.data)
-      setUsers(response.data); // Set the state with the fetched users
+      setUsers(response.data); 
     })
     .catch((error) => {
       console.log(error);
@@ -22,7 +22,6 @@ useEffect(() => {
       {users.map(user => (
         <li key={user._id}>
           {user.name}
-         
         </li>
     ))}
     </>

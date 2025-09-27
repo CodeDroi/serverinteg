@@ -3,11 +3,12 @@ const UserModel = require('../models/User');
 //GET 
 const getUsers = (req, res) => {
     UserModel.find()
-    .then(users => res.json(users))
+    .then(users => 
+        res.json(users))
     .catch(err => {
-        console.error(err);
+        console.error(err)
         res.status(500).json({ error: "Internal Server Error" });
-    });
+    })
 };
 
 //DELETE
