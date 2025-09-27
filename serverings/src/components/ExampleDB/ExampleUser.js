@@ -45,7 +45,7 @@ useEffect(() => {
   }, []);
 
   const handleDeleteUser = (id) => {
-    axios.delete(`http://localhost:8000/api/deleteUser/${id}`)
+    axios.delete(`http://localhost:8080/api/deleteUser/${id}`)
      .then(() => {
       setUsers(users.filter(user => user._id !== id));
      })
@@ -86,7 +86,7 @@ export function ServerInteg2(){
     }, []);
 
   const handleDeleteUser = (id) => { //deletion
-    axios.delete(`http://localhost:8000/api/deleteUser/${id}`)
+    axios.delete(`http://localhost:8080/api/deleteUser/${id}`)
      .then(() => {
       setUsers(users.filter(user => user._id !== id));
      })
@@ -96,7 +96,7 @@ export function ServerInteg2(){
    };
 
   const fetchUsers = () => {
-   axios.get("http://localhost:8000/api/getUsers")
+   axios.get("http://localhost:8080/api/getUsers")
     .then((response) => {
       setUsers(response.data);
     })
@@ -121,7 +121,7 @@ export function ServerInteg2(){
   }
 
   const handleUpdateUser = (id) => {
-     axios.put(`http://localhost:8000/api/updateUser/${id}`, editUser)
+     axios.put(`http://localhost:8080/api/updateUser/${id}`, editUser)
         .then(() => {
           fetchUsers();
           setEditUser(null);
@@ -199,10 +199,7 @@ export function ServerInteg2(){
 
 
       </div>
-    </div>
-    
-
-    
+    </div>  
   )
 
 }
