@@ -135,6 +135,7 @@ export function ServerInteg2(){
   return(
     <div>
       <div>
+        <h1> Initial Lists</h1>
         <h1>User List</h1>
           {users.map(user => (
             <li key={user._id}>
