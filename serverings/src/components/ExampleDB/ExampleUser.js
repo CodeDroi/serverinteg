@@ -18,7 +18,7 @@ useEffect(() => {
 
   return(
     <>
-    <h1>User List</h1>
+    <h1>User Lists</h1>
       {users.map(user => (
         <li key={user._id}>
           {user.name}
